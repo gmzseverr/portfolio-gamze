@@ -2,29 +2,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import React, { useState } from "react";
-import Theme from "../Theme";
+
 import { useTheme } from "../ThemeContext";
+import Theme from "../Components/Theme";
 
 function Hero() {
   const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
-    <div className="md:p-32 p-10">
+    <div className="md:p-32 py-32">
       <section
-        className={`flex flex-col items-center gap-4 md:flex-row md:justify-between 
+        className={`flex flex-col-reverse  items-center gap-4 md:flex-row md:justify-between 
         ${isDarkMode ? "text-white" : "text-gray-800 "}`}
       >
-        <div className="flex">
-          <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-4xl text-white mr-4">
-            ?
-          </div>
-          <Theme isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
-        <div className="items-center flex flex-col gap-2">
+        <div className="items-center flex flex-col gap-2 w-1/2">
           <div className="text-3xl pb-2 font-rubik font-extrabold">
             GAMZE SEVER
           </div>
-          <p>SOFTWARE DEVELOPER</p>
+          <p className="font-roboto">SOFTWARE DEVELOPER</p>
           <div className="flex gap-4">
             <a
               href="https://github.com"
@@ -85,6 +80,10 @@ function Hero() {
               Resume
             </button>
           </a>
+        </div>
+        <div className="flex flex-col-reverse ">
+          <img src="src/assets/image.png" alt="" className="w-60 h-58 pb-5" />
+          <Theme isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
       </section>
     </div>

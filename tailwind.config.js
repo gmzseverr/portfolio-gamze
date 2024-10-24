@@ -5,19 +5,24 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Define your custom colors
+        blueGray: "#647c90",
+        ivory: "#e2ded0",
+        coolGray: "#4e4f50", // Cool Gray
+        gray: "#746c70", // Gray
+        salmon: "#fcb5ac", // Salmon
+
         light: {
-          background: "#F7F7F7",
-          text: "#000000",
-          accent1: "#865DFF",
-          accent2: "#E384FF",
-          accent3: "#FFA3FD",
+          background: "#e2ded0",
+          accent1: "#647c90",
+          accent2: "#fcb5ac",
+          text: "#4e4f50",
         },
         dark: {
-          background: "#191825",
-          text: "#FFFFFF",
-          accent1: "#865DFF",
-          accent2: "#E384FF",
-          accent3: "#FFA3FD",
+          background: "#4e4f50",
+          accent1: "#647c90",
+          accent2: "#746c70",
+          text: "#e2ded0",
         },
       },
       fontFamily: {

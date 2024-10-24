@@ -11,6 +11,7 @@ function Projects() {
       demoLink: "https://example.com/demo-ecommerce",
       codeLink: "https://github.com/username/ecommerce-project",
       image: "src/assets/image.png",
+      status: "done",
     },
     {
       title: "Library Management System",
@@ -19,11 +20,13 @@ function Projects() {
       techStack: ["Java", "Spring Boot", "MySQL"],
       demoLink: "https://example.com/demo-library",
       codeLink: "https://github.com/username/library-management-system",
+      image: "src/assets/image.png",
+      status: "progress",
     },
   ];
 
   return (
-    <div className="md:p-32 p-10 flex flex-col">
+    <div className="md:p-32 p-10 ">
       <h1 className="text-2xl font-bold mb-6">PROJECTS</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projectsData.map((project, index) => (

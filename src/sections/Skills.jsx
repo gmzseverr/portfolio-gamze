@@ -18,13 +18,13 @@ function Skills() {
   ];
 
   return (
-    <div className="bg-dark-accent1 ">
-      <div className="md:p-32 p-10 ">
-        <div className="bg-light-background dark:bg-dark-background p-6 rounded-lg shadow-md">
-          <h1 className="text-4xl py-6  font-bold text-light-accent1 dark:text-dark-accent1 text-center ">
-            SKILLS
+    <div className="">
+      <div className="md:p-32 p-10">
+        <div className="flex flex-col md:flex-row items-center md:justify-between ">
+          <h1 className="text-5xl py-6 font-bold text-light-accent1 dark:text-dark-accent1 text-center md:text-left md:mr-10">
+            My Skills
           </h1>
-          <section>
+          <section className="flex-grow">
             <SkillList skills={skillsData} />
           </section>
         </div>
