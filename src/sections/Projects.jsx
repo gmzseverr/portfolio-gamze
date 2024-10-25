@@ -8,7 +8,7 @@ function Projects() {
       description:
         "A fully responsive e-commerce web application developed using React.js and Tailwind CSS. Users can sign up, add products to their cart, create address cards, and easily complete their orders.",
       techStack: ["React", "Tailwind CSS", "Responsive", "Redux", "Axios"],
-      demoLink: "rhea-wear.vercel.app",
+      demoLink: "https://rhea-wear.vercel.app/",
       codeLink: "https://github.com/gmzseverr/rhea-wear",
       image: "src/assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
       status: "progress",
