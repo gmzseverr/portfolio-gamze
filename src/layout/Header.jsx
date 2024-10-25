@@ -1,14 +1,22 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Theme from "../Components/Theme";
 
-const Header = ({ scrollToSection }) => {
+const Header = ({ scrollToSection, isDarkMode, toggleDarkMode }) => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-light-background dark:bg-dark-background ">
+    <header className="fixed top-0 left-0 right-0 bg-offWhite dark:bg-darkBlue ">
       <section className="flex justify-between items-center p-4">
-        <div className="text-2xl p-4 font-bold font-roboto text-light-text dark:text-dark-text">
+        <div className="text-2xl p-4 font-bold font-anton dark:text-lightBeige">
           gamze
         </div>
 
-        <nav className="flex space-x-4 font-roboto  font-semibold">
+        <nav className="flex space-x-4 font-thin">
+          <button
+            onClick={() => scrollToSection("aboutMe")}
+            className="text-light-text dark:text-dark-text text-sm hover:font-bold hover:text-xl transition-all duration-300"
+          >
+            About Me
+          </button>
           <button
             onClick={() => scrollToSection("skills")}
             className="text-light-text dark:text-dark-text text-sm hover:font-bold hover:text-xl transition-all duration-300"

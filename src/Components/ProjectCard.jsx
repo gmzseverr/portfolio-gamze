@@ -1,10 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faExternalLinkAlt,
-  faCode,
-  faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ProjectCard = ({ project }) => {
@@ -22,7 +18,7 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 dark:bg-dark-accent2 rounded-md shadow-lg transition-transform duration-300 hover:scale-105">
+    <div className="p-4 border-4 rounded-lg  border-black dark:bg-dark-accent2 shadow-lg transition-transform duration-300 hover:scale-105">
       <div className="flex gap-4 justify-end">
         <a
           href={project.demoLink}
@@ -42,12 +38,15 @@ const ProjectCard = ({ project }) => {
         </a>
       </div>
 
-      <div className="flex gap-6">
-        <img src={project.image} className="w-2/5" />
-        <section>
-          <h3 className="text-xl font-bold text-light-text dark:text-dark-text mb-2">
-            {project.title}
-          </h3>
+      <div className="flex gap-6 flex-col items-center">
+        <h3 className="text-xl font-bold text-light-text dark:text-dark-text mb-2">
+          {project.title}
+        </h3>
+        <img
+          src={project.image}
+          className="w-2/3 object-left-top object-contain"
+        />
+        <section className="px-4">
           <p className="text-light-text dark:text-dark-text mb-4">
             {project.description}
           </p>
@@ -55,7 +54,7 @@ const ProjectCard = ({ project }) => {
             {project.techStack.map((tech, index) => (
               <span
                 key={index}
-                className="bg-light-accent1 dark:bg-dark-accent1 text-white px-2 py-1 rounded-md"
+                className="  dark:text-white px-2 py-1 border-2 border-black rounded-md"
               >
                 {tech}
               </span>

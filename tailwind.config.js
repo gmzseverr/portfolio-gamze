@@ -5,29 +5,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Define your custom colors
-        blueGray: "#647c90",
-        ivory: "#e2ded0",
-        coolGray: "#4e4f50", // Cool Gray
-        gray: "#746c70", // Gray
-        salmon: "#fcb5ac", // Salmon
-
-        light: {
-          background: "#e2ded0",
-          accent1: "#647c90",
-          accent2: "#fcb5ac",
-          text: "#4e4f50",
-        },
-        dark: {
-          background: "#4e4f50",
-          accent1: "#647c90",
-          accent2: "#746c70",
-          text: "#e2ded0",
-        },
+        colorful: "#ff8000",
+        lightBeige: "#EEEDE7",
+        offWhite: "#FEFEFE",
+        darkColor: " #001f3d",
+        cyan: "#2ff3e0",
       },
       fontFamily: {
-        rubik: ["Rubik", "sans-serif"], // Rubik font
-        roboto: ["Roboto", "sans-serif"], // Roboto font
+        rubik: ["Rubik", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        cutiveMono: ['"Cutive Mono"', "monospace"],
+        anton: ['"Anton"', "sans-serif"],
       },
     },
   },
