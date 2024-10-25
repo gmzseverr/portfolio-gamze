@@ -5,12 +5,12 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="  py-8">
-      <div className="container mx-auto text-center">
-        <h2 className="text-2xl font-bold text-light-text dark:text-dark-text mb-4">
+    <footer className=" bg-dark-accent dark:bg-light-accent py-8">
+      <div className="container py-10 mx-auto text-center text-dark-background dark:text-light-background">
+        <h2 className="text-3xl font-bold text-light-text dark:text-dark-text mb-4 font-rubik">
           Send Me a Message
         </h2>
-        <p className="text-light-text dark:text-dark-text mb-2">
+        <p className="text-light-text dark:text-dark-text mb-2 font-cutiveMono">
           You can check my accounts
         </p>
 
@@ -18,13 +18,13 @@ const Footer = () => {
           <a href="mailto:gmzsever12@gmail.com">
             <FontAwesomeIcon
               icon={faAt}
-              className="p-2 text-xl text-light-accent1 hover:text-2xl"
+              className="p-2 text-xl text-light-accent1 hover:text-3xl"
             />
           </a>
           <a href="https://www.linkedin.com/in/gamzesever/" target="_blank">
             <FontAwesomeIcon
               icon={faLinkedinIn}
-              className="p-2 text-xl text-light-accent1 hover:text-2xl"
+              className="p-2 text-xl text-light-accent1 hover:text-3xl"
             />
           </a>
           <a
@@ -34,13 +34,13 @@ const Footer = () => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              className="p-2 text-xl text-light-accent1 hover:text-2xl"
+              className="p-2 text-xl text-light-accent1 hover:text-3xl"
             />
           </a>
           <a href="src/assets/gamze.sever-CV .pdf">
             <FontAwesomeIcon
               icon={faFile}
-              className="p-2 text-xl text-light-accent1 hover:text-2xl"
+              className="p-2 text-xl text-light-accent1 hover:text-3xl"
             />
           </a>
         </div>

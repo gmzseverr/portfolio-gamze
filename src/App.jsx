@@ -38,7 +38,7 @@ function App() {
         <section ref={aboutMeRef}>
           <AboutMe />
         </section>
-        <div className="container">
+        <div>
           <section ref={skillsRef}>
             <Skills />
           </section>

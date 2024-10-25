@@ -18,9 +18,9 @@ function Skills() {
   ];
 
   return (
-    <div className="md:px-32 py-32 px-10 md:py-22 ">
-      <div className=" flex flex-col justify-items-center ">
-        <h1 className="font-anton text-6xl py-6 text-light-accent1 dark:text-lightBeige text-center md:text-left">
+    <div className="md:px-32 bg-light-background dark:bg-dark-background py-32 px-10 md:py-22 ">
+      <div className=" flex flex-col justify-items-center text-light-text dark:text-dark-text ">
+        <h1 className="font-anton text-6xl py-6  text-light-text dark:text-dark-text text-center pb-10">
           MY SKILLS
         </h1>
         <div className="flex flex-col md:flex-row items-center md:justify-between ">
