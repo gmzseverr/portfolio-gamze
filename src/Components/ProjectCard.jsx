@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
             href={project.demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light-background  text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
+            className="text-light-background cursor-pointer text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
           >
             <FontAwesomeIcon icon={faGlobe} />
           </a>
@@ -40,7 +40,7 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className="flex gap-6 flex-col  items-center">
-          <h3 className="text-xl font-bold dark:text-light-text text-dark-text    mb-2">
+          <h3 className="text-xl font-bold cursor-pointer dark:text-light-text text-dark-text    mb-2">
             {project.title}
           </h3>
           <img
