@@ -24,7 +24,7 @@ function Projects() {
 
   return (
     <section>
-      <div className="md:px-32 py-32 px-10 flex">
+      <div className="md:px-32 py-32 px-10 flex dark:bg-dark-background ">
         <section className="flex flex-col items-center w-full">
           <h1 className="font-anton text-6xl py-6 text-light-text dark:text-dark-text text-center">
             PROJECTS

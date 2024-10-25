@@ -2,8 +2,8 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div className=" md:px-32 py-32 px-10 md:py-22 flex items-center justify-center">
-      <div className="flex  text-light-text flex-col md:flex-row items-start px-10 ">
+    <div className=" md:px-32 py-32 px-10 md:py-22 flex items-center justify-center dark:bg-dark-background">
+      <div className="flex dark:text-dark-text text-light-text flex-col md:flex-row items-start px-10 ">
         <div className="">
           <h2 className="font-anton px-5 text-2xl">HI I'M GAMZE</h2>
           <div className="font-cutiveMono">

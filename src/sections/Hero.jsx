@@ -5,12 +5,12 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="md:px-32 py-32 px-10 bg-light-background dark:bg-dark-background">
+    <div className="md:px-32  px-10 bg-light-background dark:bg-dark-background">
       <section
         className="flex flex-col gap-4 md:flex-row md:justify-between 
         text-gray-800 dark:text-white"
       >
-        <div className="items-start md:self-end pb-36 flex flex-col gap-2 md:w-2/6">
+        <div className="items-start md:self-end pb-36  flex flex-col gap-2 md:w-2/6">
           <section>
             <div className="text-3xl pb-2 font-anton text-[#0b1957] dark:text-light-background ">
               JUNIOR
