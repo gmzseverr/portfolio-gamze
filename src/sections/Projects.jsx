@@ -13,6 +13,7 @@ function Projects() {
       image: "src/assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
       status: "progress",
     },
+
     {
       title: "Library Management System",
       description:
