@@ -7,14 +7,15 @@ function Skills() {
   const skillsData = [
     { icon: faCheck, skill: "HTML" },
     { icon: faCheck, skill: "CSS" },
-    { icon: faCheck, skill: "JavaScript" },
+    { icon: faCheck, skill: "Java" },
     { icon: faCheck, skill: "React.js" },
     { icon: faCheck, skill: "Git" },
-    { icon: faCheck, skill: "Tailwind" },
-    { icon: faCheck, skill: "Bootstrap" },
-    { icon: faCheck, skill: "Java" },
-    { icon: faCheck, skill: "SQL" },
     { icon: faCheck, skill: "PostgreSQL" },
+    { icon: faCheck, skill: "Bootstrap" },
+    { icon: faCheck, skill: "JavaScript" },
+    { icon: faCheck, skill: "SQL" },
+    { icon: faCheck, skill: "Figma" },
+    { icon: faCheck, skill: "Tailwind" },
   ];
 
   return (

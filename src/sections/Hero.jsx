@@ -28,7 +28,7 @@ function Hero() {
             <section className="flex flex-col items-center justify-end gap-2">
               <div className="flex gap-4 md:justify-end">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/gmzseverr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -39,7 +39,7 @@ function Hero() {
                   />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/gamzesever/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
