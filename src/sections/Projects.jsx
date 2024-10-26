@@ -10,7 +10,7 @@ function Projects() {
       techStack: ["React", "Tailwind CSS", "Responsive", "Redux", "Axios"],
       demoLink: "https://rhea-wear.vercel.app/",
       codeLink: "https://github.com/gmzseverr/rhea-wear",
-      image: "src/assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
+      image: "../assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
       status: "progress",
     },
     {

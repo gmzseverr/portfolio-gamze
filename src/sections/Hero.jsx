@@ -62,7 +62,7 @@ function Hero() {
         </div>
 
         <div className="flex flex-col-reverse justify-end md:w-3/6">
-          <img src="src/assets/IMG_0310.jpeg" alt="" className="" />
+          <img src="../assets/IMG_0310.jpeg" alt="" className="" />
         </div>
       </section>
     </div>
