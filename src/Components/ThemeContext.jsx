@@ -6,7 +6,6 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // İlk açılışta tarayıcıdan veya localStorage'dan tema durumunu kontrol edelim
     const storedTheme = localStorage.getItem("theme");
     return (
       storedTheme === "dark" ||
@@ -18,7 +17,7 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
-      // Tema durumunu localStorage'da saklıyoruz
+
       localStorage.setItem("theme", newMode ? "dark" : "light");
       return newMode;
     });

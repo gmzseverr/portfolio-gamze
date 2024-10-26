@@ -10,7 +10,10 @@ const Header = ({ scrollToSection }) => {
     <header className="fixed top-0 left-0 right-0 flex justify-between  items-start p-4">
       <section className="flex">
         <div className="flex flex-col items-center">
-          <h1 className="text-3xl p-4 font-bold font-anton dark:text-dark-text text-light-text">
+          <h1
+            onClick={() => scrollToSection("hero")}
+            className="text-3xl p-4 font-bold font-anton cursor-pointer dark:text-dark-text text-light-text"
+          >
             gmz
           </h1>
           <nav className="flex items-start font-thin flex-col">

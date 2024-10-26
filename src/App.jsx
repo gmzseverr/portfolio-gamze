@@ -11,13 +11,16 @@ import "animate.css";
 import AboutMe from "./sections/AboutMe";
 
 function App() {
+  const heroRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const aboutMeRef = useRef(null);
 
   const scrollToSection = (section) => {
-    if (section === "skills") {
+    if (section === "hero") {
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (section === "skills") {
       skillsRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (section === "projects") {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -32,8 +35,9 @@ function App() {
     <Router>
       <ThemeProvider>
         <Header scrollToSection={scrollToSection} />
-
-        <Hero />
+        <section ref={heroRef}>
+          <Hero />
+        </section>
 
         <section ref={aboutMeRef}>
           <AboutMe />

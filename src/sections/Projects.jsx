@@ -26,6 +26,8 @@ function Projects() {
         "A classic snake game with using vanilla HTML, CSS, JavaScript.",
       techStack: ["JavaScript", "HTML", "CSS"],
       status: "started",
+      codeLink: "https://github.com/gmzseverr/snake",
+      image: "../assets/snake-project.jpeg",
     },
   ];
 

@@ -20,33 +20,41 @@ const ProjectCard = ({ project }) => {
   return (
     <section className="flex flex-col">
       <div className="p-4 border-4 rounded-lg bg-light border-light-text dark:bg-dark-text bg-light-text shadow-lg transition-transform duration-300 hover:scale-105">
-        <div className="flex gap-4 justify-end  dark:text-dark-text text-light-background ">
-          <a
-            href={project.demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-light-background cursor-pointer text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
-          >
-            <FontAwesomeIcon icon={faGlobe} />
-          </a>
-          <a
-            href={project.codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-light-accent1 dark:text-dark-accent1 text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+        <div className="flex gap-4 justify-end dark:text-dark-text text-light-background">
+          {project.demoLink && (
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-light-background dark:text-dark-background  cursor-pointer text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
+            >
+              <FontAwesomeIcon icon={faGlobe} />
+            </a>
+          )}
+
+          {project.codeLink && (
+            <a
+              href={project.codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-light-background dark:text-dark-background text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          )}
         </div>
 
-        <div className="flex gap-6 flex-col  items-center">
-          <h3 className="text-xl font-bold cursor-pointer dark:text-light-text text-dark-text    mb-2">
+        <div className="flex gap-6 flex-col items-center">
+          <h3 className="text-xl font-bold cursor-pointer dark:text-light-text text-dark-text mb-2">
             {project.title}
           </h3>
-          <img
-            src={project.image}
-            className="w-2/3 object-left-top object-contain"
-          />
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-2/3 object-left-top object-contain"
+            />
+          )}
           <section className="px-4">
             <p className="dark:text-light-text text-dark-text mb-4">
               {project.description}
@@ -55,18 +63,18 @@ const ProjectCard = ({ project }) => {
               {project.techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="   px-2 py-1 text-light-text dark:text-dark-text bg-dark-text dark:bg-light-text hover:bg-dark-accent hover:dark:bg-light-accent  rounded-xl"
+                  className="px-2 py-1 text-light-text dark:text-dark-text bg-dark-text dark:bg-light-text hover:bg-dark-accent hover:dark:bg-light-accent rounded-xl"
                 >
                   {tech}
                 </span>
               ))}
             </div>
             <div
-              className={`rounded-full w-max flex justify-self-end  ${getStatusColor(
+              className={`rounded-full w-max flex justify-self-end ${getStatusColor(
                 project.status
               )}`}
             >
-              <p className=" text-light-background  dark:text-dark-background text-xs font-rubik py-1 px-2 ">
+              <p className="text-light-background dark:text-dark-background text-xs font-rubik py-1 px-2">
                 {project.status === "done" && "Done"}
                 {project.status === "progress" && "In Progress"}
                 {project.status === "started" && "Started"}
