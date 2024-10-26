@@ -20,16 +20,23 @@ function Projects() {
       techStack: ["Java", "Spring Boot", "PostgreSQL"],
       status: "done",
     },
+    {
+      title: "Retro Snake Game",
+      description:
+        "A classic snake game with using vanilla HTML, CSS, JavaScript.",
+      techStack: ["JavaScript", "HTML", "CSS"],
+      status: "started",
+    },
   ];
 
   return (
     <section>
-      <div className="md:px-32 py-32 px-10 flex dark:bg-dark-background ">
-        <section className="flex flex-col items-center w-full">
+      <div className="md:px-32 py-32 px-10 dark:bg-dark-background">
+        <section className="flex flex-col items-center">
           <h1 className="font-anton text-6xl py-6 text-light-text dark:text-dark-text text-center">
             PROJECTS
           </h1>
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
             {projectsData.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
