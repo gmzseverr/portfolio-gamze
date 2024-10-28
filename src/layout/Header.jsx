@@ -7,16 +7,16 @@ const Header = ({ scrollToSection }) => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 flex justify-between  items-start p-4">
+    <header className="fixed bottom-0 md:bg-transparent md:dark:bg-transparent bg-light-background dark:bg-dark-background md:top-0 left-0 right-0 flex md:justify-between items-center justify-around md:items-start py-0 px-4 md:p-4">
       <section className="flex">
-        <div className="flex flex-col items-center">
+        <div className="flex md:flex-col items-center">
           <h1
             onClick={() => scrollToSection("hero")}
             className="text-3xl p-4 font-bold font-anton cursor-pointer dark:text-dark-text text-light-text"
           >
             gmz
           </h1>
-          <nav className="flex items-start font-thin flex-col">
+          <nav className="md:gap-0 gap-3 text-xs  flex md:items-start font-thin md:flex-col">
             <button
               onClick={() => scrollToSection("aboutMe")}
               className="text-light-text dark:text-dark-text text-sm hover:font-bold hover:text-xl transition-all duration-300"

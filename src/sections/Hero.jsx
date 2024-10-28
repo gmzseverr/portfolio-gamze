@@ -5,27 +5,27 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="md:px-32  px-10 bg-light-background dark:bg-dark-background">
+    <div className="md:px-32 pt-28 md:pt-0 px-10 bg-light-background dark:bg-dark-background">
       <section
         className="flex flex-col gap-4 md:flex-row md:justify-between 
-        text-gray-800 dark:text-white"
+        text-dark-background dark:text-light-background"
       >
-        <div className="items-start md:self-end pb-36  flex flex-col gap-2 md:w-2/6">
+        <div className="items-start  md:self-end pb-36  flex flex-col gap-2 md:w-2/6">
           <section>
-            <div className="text-3xl pb-2 font-anton text-[#0b1957] dark:text-light-background ">
+            <div className="text-3xl pb-2 font-anton text-dark-background dark:text-light-background ">
               JUNIOR
             </div>
-            <p className="font-anton text-8xl font-extrabold text-[#0b1957] dark:text-light-background">
+            <p className="font-anton text-8xl font-extrabold  text-dark-background dark:text-light-background">
               SOFTWARE DEVELOPER
             </p>
           </section>
-          <div className="text-[#0b1957] dark:text-light-background flex items-start gap-3 flex-col">
+          <div className=" text-dark-background dark:text-light-background flex items-start gap-3 flex-col">
             <p className="font-cutiveMono text-sm text-left">
               ...an enthusiastic junior software developer. I’m passionate about
               continuous learning and creating innovative solutions in web
               development.
             </p>
-            <section className="flex flex-col items-center justify-end gap-2">
+            <section className=" text-dark-background flex flex-col items-center justify-end gap-2">
               <div className="flex gap-4 md:justify-end">
                 <a
                   href="https://github.com/gmzseverr"
@@ -34,7 +34,7 @@ function Hero() {
                 >
                   <FontAwesomeIcon
                     icon={faGithub}
-                    className="text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
+                    className="text-dark-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
                     aria-label="GitHub"
                   />
                 </a>
