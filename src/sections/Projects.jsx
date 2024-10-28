@@ -23,10 +23,11 @@ function Projects() {
     {
       title: "Retro Snake Game",
       description:
-        "A classic snake game with using vanilla HTML, CSS, JavaScript.",
+        "A classic snake game with using vanilla HTML, CSS, JavaScript.This project is based on the classic snake game.  The game mechanics include basic features such as controlling the snake with keys, growing longer as it eats food and ending the game when it hits. The project was created using resources on YouTube.",
       techStack: ["JavaScript", "HTML", "CSS"],
-      status: "started",
+      status: "progress",
       codeLink: "https://github.com/gmzseverr/snake",
+      demoLink: "https://retro-snake-blue.vercel.app/",
       image: "../assets/snake-project.jpeg",
     },
   ];

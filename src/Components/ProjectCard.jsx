@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
               href={project.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-light-background dark:text-dark-background  cursor-pointer text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
+              className="dark:text-dark-background text-light-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
             >
               <FontAwesomeIcon icon={faGlobe} />
             </a>
@@ -37,7 +37,7 @@ const ProjectCard = ({ project }) => {
               href={project.codeLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-light-background dark:text-dark-background text-2xl hover:text-3xl hover:text-light-accent hover:dark:text-dark-accent"
+              className="dark:text-dark-background text-light-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
