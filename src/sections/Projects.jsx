@@ -14,6 +14,16 @@ function Projects() {
       status: "progress",
     },
     {
+      title: "Age Calculator",
+      description:
+        "Inspired by a Frontend Mentor challenge, this project was built using HTML, CSS, and JavaScript. It calculates a user's age based on the input date, with a focus on functionality and responsive design.",
+      techStack: ["JavaScript", "HTML", "CSS"],
+      status: "done",
+      codeLink: "https://github.com/gmzseverr/age-calculator",
+      demoLink: "https://gmzseverr.github.io/age-calculator/",
+      image: "../assets/desktop-design.jpg",
+    },
+    {
       title: "Library Management System",
       description:
         "A Java-based system that allows users to manage book inventories, lending, and returning of books. It supports user registration with different roles, enabling tailored functionalities based on membership status, including varying pricing for services.",
