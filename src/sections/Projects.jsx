@@ -11,7 +11,7 @@ function Projects() {
       status: "progress",
       codeLink: "https://github.com/gmzseverr/movie-webpage",
       demoLink: "https://imovie-webpage-practice.vercel.app/",
-      image: "../assets/Screenshot 2025-02-08 at 02.40.50.png",
+      image: "../assets/Screenshot 2025-02-08 at 02.40.50.jpeg",
     },
     {
       title: "E-commerce Website",
@@ -33,13 +33,6 @@ function Projects() {
       demoLink: "https://gmzseverr.github.io/age-calculator/",
       image: "../assets/desktop-design.jpg",
     },
-    {
-      title: "Library Management System",
-      description:
-        "A Java-based system that allows users to manage book inventories, lending, and returning of books. It supports user registration with different roles, enabling tailored functionalities based on membership status, including varying pricing for services.",
-      techStack: ["Java", "Spring Boot", "PostgreSQL"],
-      status: "done",
-    },
 
     {
       title: "Retro Snake Game",
@@ -50,6 +43,23 @@ function Projects() {
       codeLink: "https://github.com/gmzseverr/snake",
       demoLink: "https://retro-snake-blue.vercel.app/",
       image: "../assets/snake-project.jpeg",
+    },
+    {
+      title: "Responsive Portfolio",
+      description:
+        "A personal portfolio website built with React.js and Tailwind CSS, featuring dark mode and language selection. It showcases my projects, skills, and contact information in a modern and responsive design.",
+      techStack: ["JavaScript", "React.js", "Tailwind CSS"],
+      status: "done",
+      codeLink: "https://github.com/gmzseverr/my-portfolio",
+      demoLink: "https://my-portfolio-gmzseverr.vercel.app/",
+      image: "../assets/Screenshot 2025-02-13 at 01.37.44.jpeg",
+    },
+    {
+      title: "Library Management System",
+      description:
+        "A Java-based system that allows users to manage book inventories, lending, and returning of books. It supports user registration with different roles, enabling tailored functionalities based on membership status, including varying pricing for services.",
+      techStack: ["Java", "Spring Boot", "PostgreSQL"],
+      status: "done",
     },
   ];
 

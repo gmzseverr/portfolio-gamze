@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <section className="flex flex-col">
-      <div className="p-4 border-4 rounded-lg bg-light border-light-text dark:bg-dark-text bg-light-text shadow-lg transition-transform duration-300 hover:scale-105">
+      <div className="p-4 border-4 rounded-lg bg-light border-light-text dark:bg-dark-text bg-light-text shadow-2xl transition-transform duration-300 hover:scale-105">
         <div className="flex gap-4 justify-end dark:text-dark-text text-light-background">
           {project.demoLink && (
             <a

@@ -5,7 +5,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className=" bg-dark-accent dark:bg-light-accent py-8">
+    <footer className="bg-dark-accent dark:bg-light-accent py-8">
       <div className="container py-10 mx-auto text-center text-dark-background dark:text-light-background">
         <h2 className="text-3xl font-bold text-light-text dark:text-dark-text mb-4 font-rubik">
           Send Me a Message
@@ -14,34 +14,44 @@ const Footer = () => {
           You can check my accounts
         </p>
 
-        <div className="flex justify-center ">
-          <a href="mailto:gmzsever12@gmail.com">
-            <FontAwesomeIcon
-              icon={faAt}
-              className="p-2 text-xl text-light-accent1 hover:text-3xl"
-            />
+        <div className="flex justify-center space-x-3">
+          {/* Mailto link */}
+          <a
+            href="mailto:gmzsever12@gmail.com"
+            className="p-2 text-2xl text-light-accent1 cursor-pointer hover:text-3xl z-10"
+            title="Send Email"
+          >
+            <FontAwesomeIcon icon={faAt} />
           </a>
-          <a href="https://www.linkedin.com/in/gamzesever/" target="_blank">
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              className="p-2 text-xl text-light-accent1 hover:text-3xl"
-            />
+
+          {/* LinkedIn link */}
+          <a
+            href="https://www.linkedin.com/in/gamzesever/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 text-2xl text-light-accent1 cursor-pointer hover:text-3xl z-10"
+            title="LinkedIn Profile"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
+
           <a
             href="https://github.com/gmzseverr"
             target="_blank"
             rel="noopener noreferrer"
+            className="p-2 text-2xl text-light-accent1 cursor-pointer hover:text-3xl z-10"
+            title="GitHub Profile"
           >
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="p-2 text-xl text-light-accent1 hover:text-3xl"
-            />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="src/assets/gamze.sever-CV .pdf">
-            <FontAwesomeIcon
-              icon={faFile}
-              className="p-2 text-xl text-light-accent1 hover:text-3xl"
-            />
+
+          {/* CV link */}
+          <a
+            href="/assets/gamze.sever-CV.pdf"
+            className="p-2 text-2xl text-light-accent1 cursor-pointer hover:text-3xl z-10"
+            title="Download CV"
+          >
+            <FontAwesomeIcon icon={faFile} />
           </a>
         </div>
       </div>
