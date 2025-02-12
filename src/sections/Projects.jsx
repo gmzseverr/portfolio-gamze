@@ -4,6 +4,16 @@ import ProjectCard from "../Components/ProjectCard";
 function Projects() {
   const projectsData = [
     {
+      title: "Movie Web Page",
+      description:
+        "This is a movie listing web application built with React and vanilla CSS. The project is still in its early stages, with only the homepage and header completed. The goal is to make the app fully responsive. It will fetch movie data from an API, allowing users to browse films categorized by genre. Registered users will be able to add movies to their personal watchlist and enjoy a more personalized experience.",
+      techStack: ["React", "CSS", "Responsive", "Redux", "Axios"],
+      status: "progress",
+      codeLink: "https://github.com/gmzseverr/movie-webpage",
+      demoLink: "https://imovie-webpage-practice.vercel.app/",
+      image: "../assets/Screenshot 2025-02-08 at 02.40.50.png",
+    },
+    {
       title: "E-commerce Website",
       description:
         "A fully responsive e-commerce web application developed using React.js and Tailwind CSS. Users can sign up, add products to their cart, create address cards, and easily complete their orders.",
@@ -30,12 +40,13 @@ function Projects() {
       techStack: ["Java", "Spring Boot", "PostgreSQL"],
       status: "done",
     },
+
     {
       title: "Retro Snake Game",
       description:
         "A classic snake game with using vanilla HTML, CSS, JavaScript.This project is based on the classic snake game.  The game mechanics include basic features such as controlling the snake with keys, growing longer as it eats food and ending the game when it hits. The project was created using resources on YouTube.",
       techStack: ["JavaScript", "HTML", "CSS"],
-      status: "progress",
+      status: "done",
       codeLink: "https://github.com/gmzseverr/snake",
       demoLink: "https://retro-snake-blue.vercel.app/",
       image: "../assets/snake-project.jpeg",
