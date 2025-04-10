@@ -9,14 +9,15 @@ function Projects() {
         "This is a movie listing web app that I built as a personal project using React for the frontend and Spring Boot with PostgreSQL for the backend. The backend handles the movie data and serves it through an API, while the frontend, built with React, uses tailwinCSS for styling and is fully responsive. The project is still a work in progress, and although it’s not yet deployed, I’m excited to continue improving it, adding new features, and preparing it for launch soon.",
       techStack: [
         "React",
+        "Java",
         "Spring Boot",
         "PostgreSQL",
-        "CSS",
-        "Responsive Design",
+        "Tailwind CSS",
+        "Responsive",
         "Axios",
         "Redux",
       ],
-      status: "in progress",
+      status: "progress",
       codeLink: "https://github.com/gmzseverr/movie-data",
       demoLink:
         "https://www.loom.com/share/ddf3039f066e4b7fa491f2b0ee28de0c?sid=6bcfb291-c560-4d4a-9d50-25b7b89f28c6",
