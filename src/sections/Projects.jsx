@@ -6,12 +6,22 @@ function Projects() {
     {
       title: "Movie Web Page",
       description:
-        "This is a movie listing web application built with React and vanilla CSS. The project is still in its early stages, with only the homepage and header completed. The goal is to make the app fully responsive. It will fetch movie data from an API, allowing users to browse films categorized by genre. Registered users will be able to add movies to their personal watchlist and enjoy a more personalized experience.",
-      techStack: ["React", "CSS", "Responsive", "Redux", "Axios"],
-      status: "progress",
-      codeLink: "https://github.com/gmzseverr/movie-webpage",
-      demoLink: "https://imovie-webpage-practice.vercel.app/",
-      image: "../assets/Screenshot 2025-02-08 at 02.40.50.jpeg",
+        "This is a movie listing web app that I built as a personal project using React for the frontend and Spring Boot with PostgreSQL for the backend. The backend handles the movie data and serves it through an API, while the frontend, built with React, uses tailwinCSS for styling and is fully responsive. The project is still a work in progress, and although it’s not yet deployed, I’m excited to continue improving it, adding new features, and preparing it for launch soon.",
+      techStack: [
+        "React",
+        "Spring Boot",
+        "PostgreSQL",
+        "CSS",
+        "Responsive Design",
+        "Axios",
+        "Redux",
+      ],
+      status: "in progress",
+      codeLink: "https://github.com/gmzseverr/movie-data",
+      demoLink:
+        "https://www.loom.com/share/ddf3039f066e4b7fa491f2b0ee28de0c?sid=6bcfb291-c560-4d4a-9d50-25b7b89f28c6",
+
+      image: "../assets/wicked.jpeg",
     },
     {
       title: "E-commerce Website",
@@ -58,7 +68,7 @@ function Projects() {
       title: "Library Management System",
       description:
         "A Java-based system that allows users to manage book inventories, lending, and returning of books. It supports user registration with different roles, enabling tailored functionalities based on membership status, including varying pricing for services.",
-      techStack: ["Java", "Spring Boot", "PostgreSQL"],
+      techStack: ["Java"],
       status: "done",
     },
   ];
