@@ -1,7 +1,7 @@
 // Skills.js
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import SkillList from "../Components/SkillList"; // Adjust the import path if needed
+import SkillList from "../Components/SkillList"; //
 
 function Skills() {
   const skillsData = [
