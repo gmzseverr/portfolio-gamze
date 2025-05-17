@@ -6,7 +6,7 @@ function Projects() {
     {
       title: "Movie Web Page",
       description:
-        "This is a movie listing web app that I built as a personal project using React for the frontend and Spring Boot with PostgreSQL for the backend. The backend handles the movie data and serves it through an API, while the frontend, built with React, uses tailwinCSS for styling and is fully responsive. The project is still a work in progress, and although it’s not yet deployed, I’m excited to continue improving it, adding new features, and preparing it for launch soon.",
+        "This is a full-stack web application with a Spring Boot and PostgreSQL backend and a React frontend styled with Tailwind CSS. The project includes basic features such as user management and data handling. Development is ongoing, with additional features and design improvements being implemented. This project helped me strengthen my skills in both frontend and backend development using modern web technologies.",
       techStack: [
         "React",
         "Java",
@@ -18,9 +18,8 @@ function Projects() {
         "Redux",
       ],
       status: "progress",
-      codeLink: "https://github.com/gmzseverr/movie-data",
-      demoLink:
-        "https://www.loom.com/share/ddf3039f066e4b7fa491f2b0ee28de0c?sid=6bcfb291-c560-4d4a-9d50-25b7b89f28c6",
+      codeLink: "https://github.com/gmzseverr/movie-website",
+      demoLink: "https://imovie-ten.vercel.app/",
 
       image: "../assets/wicked.jpeg",
     },
