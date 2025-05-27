@@ -19,7 +19,8 @@ function Projects() {
       ],
       status: "progress",
       codeLink: "https://github.com/gmzseverr/movie-website",
-      demoLink: "https://imovie-ten.vercel.app/",
+      demoLink:
+        "https://www.loom.com/share/ddf3039f066e4b7fa491f2b0ee28de0c?sid=6bcfb291-c560-4d4a-9d50-25b7b89f28c6",
 
       image: "../assets/wicked.jpeg",
     },
@@ -32,6 +33,15 @@ function Projects() {
       codeLink: "https://github.com/gmzseverr/rhea-wear",
       image: "../assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
       status: "progress",
+    },
+    {
+      title: "Pomodoro App",
+      description: "A pomodoro app with timer and side menu.",
+      techStack: ["React", "JavaScript", "CSS"],
+      status: "done",
+      codeLink: "https://github.com/gmzseverr/pomodoro",
+      demoLink: "focus-by.netlify.app/",
+      image: "../assets/desktop-design.jpg",
     },
     {
       title: "Age Calculator",
