@@ -36,12 +36,12 @@ function Projects() {
     },
     {
       title: "Pomodoro App",
-      description: "A pomodoro app with timer and side menu.",
+      description: "A pomodoro app with timer, color themes and side menu. ",
       techStack: ["React", "JavaScript", "CSS"],
       status: "done",
       codeLink: "https://github.com/gmzseverr/pomodoro",
       demoLink: "focus-by.netlify.app/",
-      image: "../assets/desktop-design.jpg",
+      image: "../assets/pomodoro.jpeg",
     },
     {
       title: "Age Calculator",
