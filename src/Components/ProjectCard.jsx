@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faPlay } from "@fortawesome/free-solid-svg-icons"; // Import faPlay
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ProjectCard = ({ project }) => {
@@ -21,12 +21,26 @@ const ProjectCard = ({ project }) => {
     <section className="flex flex-col">
       <div className="p-4 border-4 rounded-lg bg-light border-light-text dark:bg-dark-text bg-light-text shadow-2xl transition-transform duration-300 hover:scale-105">
         <div className="flex gap-4 justify-end dark:text-dark-text text-light-background">
+          {/* New: Video Link */}
+          {project.videoLink && (
+            <a
+              href={project.videoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dark:text-dark-background text-light-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
+              title="Watch Demo Video" // Added title for accessibility
+            >
+              <FontAwesomeIcon icon={faPlay} />
+            </a>
+          )}
+
           {project.demoLink && (
             <a
               href={project.demoLink}
               target="_blank"
               rel="noopener noreferrer"
               className="dark:text-dark-background text-light-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
+              title="View Live Demo" // Added title for accessibility
             >
               <FontAwesomeIcon icon={faGlobe} />
             </a>
@@ -38,6 +52,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="dark:text-dark-background text-light-background text-xl cursor-pointer transform transition-transform duration-300 hover:scale-150 hover:text-light-accent dark:hover:text-dark-accent"
+              title="View Code on GitHub" // Added title for accessibility
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -59,6 +74,11 @@ const ProjectCard = ({ project }) => {
             <p className="dark:text-light-text text-dark-text mb-4">
               {project.description}
             </p>
+            {project.note && (
+              <p className=" font-bold text-sm pb-4 dark:text-light-text text-dark-text ">
+                {project.note}{" "}
+              </p>
+            )}
             <div className="flex flex-wrap gap-2 mb-4">
               {project.techStack.map((tech, index) => (
                 <span

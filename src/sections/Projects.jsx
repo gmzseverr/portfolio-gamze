@@ -6,7 +6,7 @@ function Projects() {
     {
       title: "Movie Web Page",
       description:
-        "This is a **full-stack movie website** built with a **Spring Boot** and **PostgreSQL** backend, and a **React** frontend using **Tailwind CSS**. It's deployed with **Render** (for the backend), **Neon** (for the database), and **Docker** for containerization. The project includes user management and movie data handling, and is actively being improved. It significantly boosted my skills across frontend, backend, and cloud deployment. **Heads up: The demo might take 1-3 minutes to load initially because the backend (on Render) needs to wake up.**",
+        "This is a full-stack movie website built with a Spring Boot and PostgreSQL backend, and a React frontend using Tailwind CSS. It's deployed with Render (for the backend), Neon (for the database), and Docker for containerization. The project includes user management and movie data handling, and is actively being improved. It significantly boosted my skills across frontend, backend, and cloud deployment. PS: The demo might take 1-3 minutes to load initially because the backend (on Render) needs to wake up.",
       techStack: [
         "React",
         "Java",
@@ -20,6 +20,7 @@ function Projects() {
         "Neon",
         "Docker",
       ],
+      note: "PS: The demo might take 1-3 minutes to load initially because the backend (on Render) needs to wake up.",
       status: "progress",
       codeLink: "https://github.com/gmzseverr/movie-website",
       demoLink: "https://imovie-ten.vercel.app/",
@@ -35,7 +36,23 @@ function Projects() {
       demoLink: "https://rhea-wear.vercel.app/",
       codeLink: "https://github.com/gmzseverr/rhea-wear",
       image: "../assets/Screenshot 2024-10-25 at 02.59.12.jpeg",
-      status: "progress",
+      status: "done",
+    },
+    {
+      title: "Roamla: AI-Powered Travel Planner",
+      description:
+        "Roamla is a modern, minimalist, and fully responsive AI-powered travel planning application that enables users to create personalized travel itineraries. Users can input preferences such as destination, number of days, budget, and travel companions to receive tailored hotel recommendations and detailed daily trip plans. The application stands out with its intuitive design, seamless user experience.",
+      techStack: [
+        "React",
+        "Tailwind CSS",
+        "Google Generative AI (Gemini API)",
+        "Google Places API",
+      ],
+
+      codeLink: "https://github.com/gmzseverr/roamla",
+      demoLink: "https://roamla.vercel.app/",
+      image: "../assets/roamla.jpeg",
+      status: "started",
     },
     {
       title: "Pomodoro App",
@@ -43,8 +60,18 @@ function Projects() {
       techStack: ["React", "JavaScript", "CSS"],
       status: "done",
       codeLink: "https://github.com/gmzseverr/pomodoro",
-      demoLink: "focus-by.netlify.app/",
+      demoLink: "https://focus-by.netlify.app/",
       image: "../assets/pomodoro.jpeg",
+    },
+    {
+      title: "Photo Print Landing Page",
+      description:
+        "This is a clean, minimalist, and fully responsive photo printing landing page built with HTML, CSS, and JavaScript. It features a countdown timer to highlight a specific event or offer.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      status: "done",
+      codeLink: "https://github.com/gmzseverr/landing-print",
+      demoLink: "https://gmzseverr.github.io/landing-print/",
+      image: "../assets/proho-print.jpeg",
     },
     {
       title: "Age Calculator",
