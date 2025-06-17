@@ -6,7 +6,7 @@ function Projects() {
     {
       title: "Movie Web Page",
       description:
-        "This is a full-stack web application with a Spring Boot and PostgreSQL backend and a React frontend styled with Tailwind CSS. The project includes basic features such as user management and data handling. Development is ongoing, with additional features and design improvements being implemented. This project helped me strengthen my skills in both frontend and backend development using modern web technologies.",
+        "This is a **full-stack movie website** built with a **Spring Boot** and **PostgreSQL** backend, and a **React** frontend using **Tailwind CSS**. It's deployed with **Render** (for the backend), **Neon** (for the database), and **Docker** for containerization. The project includes user management and movie data handling, and is actively being improved. It significantly boosted my skills across frontend, backend, and cloud deployment. **Heads up: The demo might take 1-3 minutes to load initially because the backend (on Render) needs to wake up.**",
       techStack: [
         "React",
         "Java",
@@ -16,12 +16,15 @@ function Projects() {
         "Responsive",
         "Axios",
         "Redux",
+        "Render",
+        "Neon",
+        "Docker",
       ],
       status: "progress",
       codeLink: "https://github.com/gmzseverr/movie-website",
-      demoLink:
+      demoLink: "https://imovie-ten.vercel.app/",
+      videoLink:
         "https://www.loom.com/share/ddf3039f066e4b7fa491f2b0ee28de0c?sid=6bcfb291-c560-4d4a-9d50-25b7b89f28c6",
-
       image: "../assets/wicked.jpeg",
     },
     {
