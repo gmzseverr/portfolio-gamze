@@ -29,6 +29,29 @@ function Projects() {
       image: "../assets/wicked.jpeg",
     },
     {
+      title: "BazaarX E-commerce Platform",
+      description:
+        "BazaarX is a modern e-commerce platform built with Next.js and Tailwind CSS on the frontend, and Spring Boot with MongoDB on the backend. Product data was sourced from Kaggle, cleaned and structured, then stored in MongoDB. The backend is deployed on Render and the frontend on Vercel, both containerized with Docker. It includes core e-commerce features like product listing, category-based filtering, and user management. This project improved my full-stack development skills, especially in cloud deployment and integrating modern tech stacks.",
+      techStack: [
+        "Next.js",
+        "Java",
+        "Spring Boot",
+        "MongoDB",
+        "Tailwind CSS",
+        "Responsive",
+        "Axios",
+        "Render",
+        "Vercel",
+        "Docker",
+      ],
+      note: "PS: The demo might take 1–3 minutes to load initially because the backend (on Render) needs to wake up.",
+      status: "progress",
+      codeLink: "https://github.com/gmzseverr/bazaarX-frontend",
+      demoLink: "https://bazaar-x-frontend-vert.vercel.app/",
+      videoLink: "",
+      image: "../assets/bazaarX.jpeg",
+    },
+    {
       title: "E-commerce Website",
       description:
         "A fully responsive e-commerce web application developed using React.js and Tailwind CSS. Users can sign up, add products to their cart, create address cards, and easily complete their orders.",
