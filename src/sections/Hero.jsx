@@ -5,17 +5,17 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="md:px-32 pt-28 md:pt-0 px-10 bg-light-background dark:bg-dark-background">
+    <div className="md:px-32 pt-28 md:pt-0 px-5 bg-light-background dark:bg-dark-background">
       <section
         className="flex flex-col gap-4 md:flex-row md:justify-between 
         text-dark-background dark:text-light-background"
       >
         <div className="items-start  md:self-end pb-36  flex flex-col gap-2 md:w-2/6">
-          <section>
+          <section className="flex flex-col">
             <div className="text-3xl pb-2 font-anton text-dark-background dark:text-light-background ">
               JUNIOR
             </div>
-            <p className="font-anton text-8xl font-extrabold  text-dark-background dark:text-light-background">
+            <p className="font-anton  text-8xl font-extrabold  text-dark-background dark:text-light-background">
               SOFTWARE DEVELOPER
             </p>
           </section>

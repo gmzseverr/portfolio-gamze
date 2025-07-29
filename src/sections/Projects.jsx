@@ -6,7 +6,7 @@ function Projects() {
     {
       title: "Movie Web Page",
       description:
-        "This is a full-stack movie website built with a Spring Boot and PostgreSQL backend, and a React frontend using Tailwind CSS. It's deployed with Render (for the backend), Neon (for the database), and Docker for containerization. The project includes user management and movie data handling, and is actively being improved. It significantly boosted my skills across frontend, backend, and cloud deployment. PS: The demo might take 1-3 minutes to load initially because the backend (on Render) needs to wake up.",
+        "This is a full-stack movie website built with a Spring Boot and PostgreSQL backend, and a React frontend using Tailwind CSS. It's deployed with Render (for the backend), Neon (for the database), and Docker for containerization. The project includes user management and movie data handling, and is actively being improved. It significantly boosted my skills across frontend, backend, and cloud deployment. ",
       techStack: [
         "React",
         "Java",
