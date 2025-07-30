@@ -45,7 +45,7 @@ function Hero() {
                 >
                   <FontAwesomeIcon
                     icon={faLinkedinIn}
-                    className="text-xl cursor-pointer transform transition-transform duration-300  hover:text-light-accent dark:hover:text-dark-accent"
+                    className="text-xl cursor-pointer transform transition-transform duration-300 hover:scale-125 hover:text-light-accent dark:hover:text-dark-accent"
                     aria-label="LinkedIn"
                   />
                 </a>

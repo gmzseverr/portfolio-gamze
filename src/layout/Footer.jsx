@@ -44,15 +44,6 @@ const Footer = () => {
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-
-          {/* CV link */}
-          <a
-            href="/assets/gamze.sever-CV.pdf"
-            className="p-2 text-2xl text-light-accent1 cursor-pointer hover:text-3xl z-10"
-            title="Download CV"
-          >
-            <FontAwesomeIcon icon={faFile} />
-          </a>
         </div>
       </div>
     </footer>
