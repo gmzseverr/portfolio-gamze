@@ -52,6 +52,16 @@ function Projects() {
       image: "../assets/bazaarX.jpeg",
     },
     {
+      title: "Piri Academy Landing Page",
+      description:
+        "A vibrant, kid-focused landing page built with React and Tailwind CSS. The design is playful and interactive, aiming to engage young learners. It emphasizes clean responsive layouts and smooth animations to enhance user experience.",
+      techStack: ["React", "Tailwind CSS", "Responsive Design", "JavaScript"],
+      demoLink: "https://piriacademy.com/",
+      status: "progress",
+      image: "../assets/piri.jpeg",
+    },
+
+    {
       title: "E-commerce Website",
       description:
         "A fully responsive e-commerce web application developed using React.js and Tailwind CSS. Users can sign up, add products to their cart, create address cards, and easily complete their orders.",
