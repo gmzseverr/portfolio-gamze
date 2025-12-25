@@ -128,7 +128,7 @@ const About = () => {
                 Get in Touch
               </a>
               <a
-                href="https://github.com/gamzeseverr"
+                href="https://github.com/gmzseverr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[11px] tracking-[0.25em] uppercase text-neutral-500 
