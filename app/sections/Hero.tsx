@@ -237,7 +237,7 @@ const Hero = () => {
             Github
           </a>
           <a 
-            href="https://www.linkedin.com/in/gamzeseverr/" 
+            href="https://www.linkedin.com/in/gamzesever/" 
             className="hover:text-white transition-colors" 
             target="_blank"
             rel="noopener noreferrer"

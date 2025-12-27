@@ -19,6 +19,21 @@ type Project = {
 
 const projectsData: Project[] = [
   {
+    title: "OBSCURA Photo Booth",
+    description:
+      "Vintage photo booth web app capturing 4-frame B&W strips with retro film effects. Real-time camera filters, GSAP animations, and canvas-based image processing. Features planned: Web Share API, multiple filters, and photo gallery.",
+    techStack: [
+      "Next.js 15",
+      "TypeScript", 
+      "Tailwind CSS",
+      "GSAP",
+      "HTML5 Canvas",
+    ],
+    image: "/assets/obscura.png",
+    demoLink: "https://obscura-gmz.vercel.app",
+    codeLink: "https://github.com/gmzseverr/obscura",
+  },
+  {
     title: "Movie Web Platform",
     description:
       "A full-stack movie platform built with Spring Boot & PostgreSQL on the backend and React on the frontend. Deployed with Docker, Render, and Neon. Includes authentication and movie data management.",
