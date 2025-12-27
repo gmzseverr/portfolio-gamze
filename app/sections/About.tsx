@@ -121,7 +121,7 @@ const About = () => {
             {/* CTA */}
             <div className="mt-12 flex gap-6">
               <a
-                href="mailto:gmzsever12@gmail.com"
+                href="#contact"
                 className="text-[11px] tracking-[0.25em] uppercase border-b border-white pb-1 
                          hover:text-neutral-400 hover:border-neutral-400 transition-colors"
               >
