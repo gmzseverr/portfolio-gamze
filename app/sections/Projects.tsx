@@ -133,15 +133,7 @@ const projectsData: Project[] = [
     demoLink: "https://retro-snake-blue.vercel.app/",
     image: "/assets/snake-project.jpeg",
   },
-  {
-    title: "Responsive Portfolio",
-    description:
-      "A personal portfolio website built with React.js and Tailwind CSS, featuring dark mode and language selection. It showcases my projects, skills, and contact information in a modern and responsive design.",
-    techStack: ["JavaScript", "React.js", "Tailwind CSS"],
-    codeLink: "https://github.com/gmzseverr/my-portfolio",
-    demoLink: "https://my-portfolio-gmzseverr.vercel.app/",
-    image: "/assets/Screenshot 2025-02-13 at 01.37.44.jpeg",
-  },
+
 ]
 
 
