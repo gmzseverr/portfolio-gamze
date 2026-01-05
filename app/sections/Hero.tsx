@@ -162,7 +162,7 @@ const Hero = () => {
           Github
         </a>
         <a 
-          href="https://www.linkedin.com/in/gamzeseverr/" 
+      href="https://www.linkedin.com/in/gamzesever/"
           className="hover:text-white transition-colors cursor-pointer" 
           target="_blank"
           rel="noopener noreferrer"
@@ -236,12 +236,12 @@ const Hero = () => {
           >
             Github
           </a>
-          <a 
-            href="https://www.linkedin.com/in/gamzesever/"
-            className="hover:text-white transition-colors" 
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a
+                href="https://www.linkedin.com/in/gamzesever/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-neutral-500 hover:text-white transition-colors"
+              >
             LinkedIn
           </a>
           <a 
