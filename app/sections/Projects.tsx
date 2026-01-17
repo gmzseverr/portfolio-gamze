@@ -44,7 +44,7 @@ const projectsData: Project[] = [
       "Framer Motion",
       "HTML5 Canvas API",
     ],
-    image: ["/assets/everframe-1.png", "/assets/everframe-2.png", "/assets/everframe-3.png"], 
+    image: ["/assets/everframe-desktop.png", "/assets/everframe-2.png", "/assets/everframe-3.png"], 
     demoLink: "https://cansutufan.vercel.app/",
     note: "Features a custom-built image processing engine optimized for high-DPI mobile displays and print-ready digital outputs.",
   },
@@ -152,30 +152,36 @@ const projectsData: Project[] = [
 ]
 
 
+
+
+
+
 export default function Projects() {
   const [active, setActive] = useState<Project | null>(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
+  const slideIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
+  // GSAP Animations
   useEffect(() => {
     if (!sectionRef.current) return
 
     const ctx = gsap.context(() => {
-
-        gsap.fromTo(
-            headerRef.current,
-            { opacity: 0, y: 50 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power3.out",
-              scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top 70%",
-              },
-            }
-          )
+      gsap.fromTo(
+        headerRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+          },
+        }
+      )
       gsap.fromTo(
         ".project-card",
         { opacity: 0, y: 40 },
@@ -196,15 +202,35 @@ export default function Projects() {
     return () => ctx.revert()
   }, [])
 
+  // Auto Slider - 3.5 saniye
+  useEffect(() => {
+    if (active && Array.isArray(active.image) && active.image.length > 1) {
+      slideIntervalRef.current = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % active.image.length)
+      }, 3500)
+
+      return () => {
+        if (slideIntervalRef.current) {
+          clearInterval(slideIntervalRef.current)
+        }
+      }
+    }
+  }, [active])
+
+  // Reset slide on modal open
+  useEffect(() => {
+    if (active) {
+      setCurrentSlide(0)
+    }
+  }, [active])
+
   return (
     <section
-    id="projects"
+      id="projects"
       ref={sectionRef}
       className="bg-black text-white py-32 px-8 md:px-16"
     >
-  
-        {/* Label */}
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={headerRef}>
           <div className="text-[9px] tracking-[0.4em] uppercase text-neutral-600 mb-6">
@@ -234,13 +260,12 @@ export default function Projects() {
                 group-hover:border-neutral-700
                 group-hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]"
               >
-              <Image
-
-  src={Array.isArray(p.image) ? p.image[0] : p.image}
-  alt={p.title}
-  fill
-  className="object-cover transition-transform duration-500 group-hover:scale-105"
-/>
+                <Image
+                  src={Array.isArray(p.image) ? p.image[0] : p.image}
+                  alt={p.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
 
               <h3 className="mt-4 text-lg font-medium group-hover:text-neutral-300 transition-colors">
@@ -257,50 +282,83 @@ export default function Projects() {
 
       {/* MODAL */}
       {active && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center px-6">
-          <div className="max-w-3xl w-full bg-neutral-950 border border-neutral-800 rounded-xl p-8 relative">
+        <div 
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center px-6"
+          onClick={() => setActive(null)}
+        >
+          <div 
+            className="max-w-4xl w-full bg-neutral-950 border border-neutral-800 rounded-2xl p-8 relative max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setActive(null)}
-              className="absolute top-4 right-4 text-neutral-500 hover:text-white"
+              className="absolute top-6 right-6 text-neutral-500 hover:text-white transition-colors z-10 text-2xl leading-none"
             >
-              ✕
+              ×
             </button>
 
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-3xl font-bold mb-6 pr-8">
               {active.title}
             </h3>
-            {/* Modal İçinde Resim Gösterimi */}
-<div className="relative aspect-video mb-6 overflow-hidden rounded-lg border border-neutral-800 flex gap-2 overflow-x-auto snap-x">
-  {Array.isArray(active.image) ? (
-    active.image.map((img, idx) => (
-      <div key={idx} className="relative min-w-full h-full snap-center">
-        <Image
-          src={img}
-          alt={`${active.title} ${idx + 1}`}
-          fill
-          className="object-cover"
-        />
-      </div>
-    ))
-  ) : (
-    <Image
-      src={active.image}
-      alt={active.title}
-      fill
-      className="object-cover"
-    />
-  )}
-</div>
 
-            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+            {/* Slider - Otomatik geçiş */}
+            <div className="relative aspect-video mb-8 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900">
+              {Array.isArray(active.image) ? (
+                <>
+                  {/* Slides with smooth fade */}
+                  <div className="relative w-full h-full">
+                    {active.image.map((img, idx) => (
+                      <div
+                        key={idx}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                          idx === currentSlide ? 'opacity-100' : 'opacity-0'
+                        }`}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${active.title} ${idx + 1}`}
+                          fill
+                          className="object-contain p-4"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Navigation Dots */}
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
+                    {active.image.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          idx === currentSlide 
+                            ? 'bg-white w-8' 
+                            : 'bg-neutral-600 hover:bg-neutral-500 w-2'
+                        }`}
+                        aria-label={`Go to slide ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Image
+                  src={active.image}
+                  alt={active.title}
+                  fill
+                  className="object-contain p-4"
+                />
+              )}
+            </div>
+
+            <p className="text-neutral-400 text-base leading-relaxed mb-8">
               {active.description}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-2.5 mb-8">
               {active.techStack.map((t, i) => (
                 <span
                   key={i}
-                  className="text-[11px] px-3 py-1 rounded-full border border-neutral-700 text-neutral-300"
+                  className="text-xs px-3.5 py-1.5 rounded-full border border-neutral-700 text-neutral-300 font-medium"
                 >
                   {t}
                 </span>
@@ -308,37 +366,40 @@ export default function Projects() {
             </div>
 
             {active.note && (
-              <p className="text-xs text-neutral-500 italic mb-4">
+              <p className="text-sm text-neutral-500 italic mb-8 border-l-2 border-neutral-800 pl-4">
                 {active.note}
               </p>
             )}
 
-            <div className="flex gap-6 text-[11px] tracking-[0.25em] uppercase">
+            <div className="flex gap-8 text-sm tracking-wide">
               {active.demoLink && (
                 <a
                   href={active.demoLink}
                   target="_blank"
-                  className="border-b border-white pb-1"
+                  rel="noopener noreferrer"
+                  className="text-white border-b-2 border-white pb-1 hover:text-neutral-300 hover:border-neutral-300 transition-colors font-medium"
                 >
-                  Live
+                  View Live →
                 </a>
               )}
               {active.codeLink && (
                 <a
                   href={active.codeLink}
                   target="_blank"
-                  className="text-neutral-500 border-b border-neutral-600 pb-1"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 border-b-2 border-neutral-700 pb-1 hover:text-white hover:border-white transition-colors font-medium"
                 >
-                  Code
+                  Source Code →
                 </a>
               )}
               {active.videoLink && (
                 <a
                   href={active.videoLink}
                   target="_blank"
-                  className="text-neutral-500 border-b border-neutral-600 pb-1"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 border-b-2 border-neutral-700 pb-1 hover:text-white hover:border-white transition-colors font-medium"
                 >
-                  Video
+                  Watch Video →
                 </a>
               )}
             </div>
