@@ -10,7 +10,7 @@ type Project = {
   title: string
   description: string
   techStack: string[]
-  image: string
+  image: string | string[]
   demoLink?: string
   codeLink?: string
   videoLink?: string
@@ -32,6 +32,21 @@ const projectsData: Project[] = [
     image: "/assets/obscura.png",
     demoLink: "https://obscura-gmz.vercel.app",
     codeLink: "https://github.com/gmzseverr/obscura",
+  },
+  {
+    title: "EverFrame: Personal Event Photo Booth",
+    description:
+      "A custom digital memory application designed specifically for a close friend's engagement ceremony. I developed an 'event-tech' solution that allowed guests to capture and download high-resolution Polaroid-style photos directly from their smartphones, with a design language inspired by the couple's physical invitation typography and color palette.",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "HTML5 Canvas API",
+    ],
+    image: ["/assets/everframe-1.png", "/assets/everframe-2.png", "/assets/everframe-3.png"], 
+    demoLink: "https://cansutufan.vercel.app/",
+    note: "Features a custom-built image processing engine optimized for high-DPI mobile displays and print-ready digital outputs.",
   },
   {
     title: "Movie Web Platform",
