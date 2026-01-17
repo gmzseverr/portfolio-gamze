@@ -234,13 +234,13 @@ export default function Projects() {
                 group-hover:border-neutral-700
                 group-hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]"
               >
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              <Image
 
+  src={Array.isArray(p.image) ? p.image[0] : p.image}
+  alt={p.title}
+  fill
+  className="object-cover transition-transform duration-500 group-hover:scale-105"
+/>
               </div>
 
               <h3 className="mt-4 text-lg font-medium group-hover:text-neutral-300 transition-colors">
@@ -269,6 +269,28 @@ export default function Projects() {
             <h3 className="text-2xl font-semibold mb-4">
               {active.title}
             </h3>
+            {/* Modal İçinde Resim Gösterimi */}
+<div className="relative aspect-video mb-6 overflow-hidden rounded-lg border border-neutral-800 flex gap-2 overflow-x-auto snap-x">
+  {Array.isArray(active.image) ? (
+    active.image.map((img, idx) => (
+      <div key={idx} className="relative min-w-full h-full snap-center">
+        <Image
+          src={img}
+          alt={`${active.title} ${idx + 1}`}
+          fill
+          className="object-cover"
+        />
+      </div>
+    ))
+  ) : (
+    <Image
+      src={active.image}
+      alt={active.title}
+      fill
+      className="object-cover"
+    />
+  )}
+</div>
 
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
               {active.description}
